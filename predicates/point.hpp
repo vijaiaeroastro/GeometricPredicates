@@ -24,13 +24,18 @@ namespace GeometricPredicates
                 void setX(T _x){ x = _x; };
             template < typename T>
                 void setY(T _y){ y = _y; };
-            vbn::BigNumber getX(){ return x;};
+            vbn::BigNumber getX()
+            {
+                return x;
+            };
             vbn::BigNumber getY(){ return y; };
+
+        public:
+            friend std::ostream& operator<<(std::ostream& stream, Point_2& input_point);
 
         private:
             vbn::BigNumber x, y;
     };
-
 
     // Point 3 type declaration
     class Point_3
@@ -51,11 +56,15 @@ namespace GeometricPredicates
                 void setZ(T _z){ z = _z; };
             vbn::BigNumber getX(){ return x; };
             vbn::BigNumber getY(){ return y; };
-            vbn::BigNumber setZ(){ return z; };
+            vbn::BigNumber getZ(){ return z; };
+
+        public:
+            friend std::ostream& operator<<(std::ostream& stream, Point_3& input_point);
 
         private:
             vbn::BigNumber x, y, z;
     };
+
 }
 
 #endif

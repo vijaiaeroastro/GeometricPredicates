@@ -9,7 +9,7 @@ void point_tests();
 int main()
 {
 //    direct_test();
-    generic_type_implementation_test();
+//    generic_type_implementation_test();
     point_tests();
     return 0;
 }
@@ -18,14 +18,14 @@ void point_tests()
 {
     using namespace GeometricPredicates;
     Point_2 p1(0.1,2.1);
-    Point_2 p2(1.2, 3.1);
-    std::cout << p1.getX() << " / " << p2.getY() << std::endl;
+    Point_3 p2(0.0, 1.0, 2.0);
+    std::cout << p2 << std::endl;
+    std::cout << p1 << std::endl;
 }
 
 void generic_type_implementation_test()
 {
     vbn::BigNumber n1(3.1415);
-    vbn::BigNumber n2 = 3.1415;
     std::cout << n1 << std::endl;
 }
 
