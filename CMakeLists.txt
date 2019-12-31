@@ -8,9 +8,11 @@ find_package(Boost REQUIRED)
 
 set(HDRS
         predicates/GenericTypes.hpp
-        predicates/point.hpp)
+        predicates/point.hpp
+        predicates/mesh.hpp)
 set(SRCS
         predicates/GenericTypes.cpp
-        predicates/point.cpp)
+        predicates/point.cpp
+        predicates/mesh.cpp)
 
 add_executable(GeomPredicates main.cpp ${HDRS} ${SRCS})
