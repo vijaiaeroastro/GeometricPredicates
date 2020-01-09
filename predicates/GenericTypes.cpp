@@ -32,28 +32,6 @@ namespace vbn
         return created_number;
     }
 
-    // All the overloaded operators
-    BigNumber BigNumber::operator+(BigNumber& other_number)
-    {
-        RationalNumber created_number = original_number;
-        created_number = created_number + other_number.getSource();
-    }
-
-    BigNumber BigNumber::operator-(BigNumber& other_number)
-    {
-        created_number = created_number - other_number.getSource();
-    }
-
-    BigNumber BigNumber::operator*(BigNumber& other_number)
-    {
-        created_number = created_number * other_number.getSource();
-    }
-
-    BigNumber BigNumber::operator/(BigNumber& other_number)
-    {
-        created_number = created_number / other_number.getSource();
-    }
-
     // All the friendlies of our class
     BigNumber operator+(BigNumber& number_1, BigNumber& number_2)
     {

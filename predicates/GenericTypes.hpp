@@ -21,10 +21,45 @@ namespace vbn {
             friend std::ostream& operator<<(std::ostream& stream, BigNumber& number);
 
         public:
-            BigNumber operator+(BigNumber& other_number);
-            BigNumber operator-(BigNumber& other_number);
-            BigNumber operator*(BigNumber& other_number);
-            BigNumber operator/(BigNumber& other_number);
+            template< typename T >
+            BigNumber operator+(T& other_number)
+            {
+                RationalNumber new_number;
+                vbn::BigNumber overload_scalar(other_number);
+                new_number = getSource() + overload_scalar.getSource();
+                created_number = new_number;
+                return *this;
+            }
+
+            template< typename T >
+            BigNumber operator-(T& other_number)
+            {
+                RationalNumber new_number;
+                vbn::BigNumber overload_scalar(other_number);
+                new_number = getSource() - overload_scalar.getSource();
+                created_number = new_number;
+                return *this;
+            }
+
+            template< typename T >
+            BigNumber operator*(T& other_number)
+            {
+                RationalNumber new_number;
+                vbn::BigNumber overload_scalar(other_number);
+                new_number = getSource() * overload_scalar.getSource();
+                created_number = new_number;
+                return *this;
+            }
+
+            template< typename T >
+            BigNumber operator/(T& other_number)
+            {
+                RationalNumber new_number;
+                vbn::BigNumber overload_scalar(other_number);
+                new_number = getSource() / overload_scalar.getSource();
+                created_number = new_number;
+                return *this;
+            }
 
         public:
             double getDouble();

@@ -17,10 +17,8 @@ int main()
 void point_tests()
 {
     using namespace GeometricPredicates;
-    Point_2 p1(0.1,2.1);
     Point_3 p2(0.0, 1.0, 2.0);
     std::cout << p2 << std::endl;
-    std::cout << p1 << std::endl;
 }
 
 void generic_type_implementation_test()
