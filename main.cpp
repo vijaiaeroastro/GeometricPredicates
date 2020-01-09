@@ -26,6 +26,8 @@ void point_tests()
 void generic_type_implementation_test()
 {
     vbn::BigNumber n1(3.1415);
+    vbn::BigNumber n2;
+    n2 = 4.1524;
     std::cout << n1 << std::endl;
 }
 

@@ -3,7 +3,7 @@
 
 namespace vbn
 {
-    BigNumber& BigNumber::operator = (const double &input_number)
+    BigNumber& BigNumber::operator = (double input_number)
     {
         original_number = input_number;
         created_number = input_number;

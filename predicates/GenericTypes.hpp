@@ -10,7 +10,7 @@ namespace vbn {
             BigNumber(){};
             BigNumber(double input_number);
             BigNumber(vbn::BigNumber& input_number);
-            BigNumber& operator = (const double &input_number);
+            BigNumber& operator = (double input_number);
             ~BigNumber(){};
 
         public:
